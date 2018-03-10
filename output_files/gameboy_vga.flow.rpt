@@ -1,5 +1,5 @@
 Flow report for gameboy_vga
-Sat Mar 10 01:07:50 2018
+Sun Mar 11 01:39:33 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar 10 01:07:49 2018           ;
+; Flow Status                        ; Successful - Sun Mar 11 01:39:32 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; gameboy_vga                                     ;
 ; Top-level Entity Name              ; gameboy_vga                                     ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 121 / 4,608 ( 3 % )                             ;
-;     Total combinational functions  ; 121 / 4,608 ( 3 % )                             ;
+; Total logic elements               ; 190 / 4,608 ( 4 % )                             ;
+;     Total combinational functions  ; 186 / 4,608 ( 4 % )                             ;
 ;     Dedicated logic registers      ; 54 / 4,608 ( 1 % )                              ;
 ; Total registers                    ; 54                                              ;
 ; Total pins                         ; 10 / 89 ( 11 % )                                ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/10/2018 01:07:40 ;
+; Start date & time ; 03/11/2018 01:39:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; gameboy_vga         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 48710639312676.152063326012756        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 48710639312676.152072156301224        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top        ;
@@ -92,11 +92,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 580 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:02     ; 1.0                     ; 752 MB              ; 00:00:02                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 478 MB              ; 00:00:00                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 480 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 580 MB              ; 00:00:04                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 752 MB              ; 00:00:02                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 478 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 468 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:08     ; --                      ; --                  ; 00:00:08                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

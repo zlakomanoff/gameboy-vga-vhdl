@@ -59,74 +59,66 @@ begin
 	process (VinClock)
 		variable ram_cell: integer range 0 to 23040 := 0;
 	begin
-		if rising_edge(VinClock) then
-			if (VinHSunc = '1') then 
-				if (VinVSunc = '1') then
-					ram_cell := 0;
-				end if;
+		if falling_edge(VinClock) then
+			if (VinHSunc = '1' and VinVSunc = '1') then
+				ram_cell := 0;
 			else
-				video_ram(ram_cell) := VinData;
 				ram_cell := ram_cell + 1;
 			end if;
+			video_ram(ram_cell) := VinData;
 		end if;
 	end process;
 
 	process (VoutClock)
-		variable VoutLineCounter : integer range 0 to 525 := 0;
-		variable VoutPixelCounter: integer range 0 to 800 := 0;
 		
-		variable VoutRamCell: integer range 0 to 23040;
+		-- VESA Signal 768 x 576 @ 60 Hz
+		-- http://tinyvga.com/vga-timing/768x576@60Hz
+		-- 768 x 576 (976 x 597)
 		
---		variable RamLine: integer range 0 to 144;
---		variable RamPixel: integer range 0 to 160;
+		variable VideoPixel: integer range 1 to 976 := 1;
+		variable VideoLine: integer range 1 to 598 := 1;
+		variable VideoRamCell: integer range 0 to 23040 := 0;
 	begin
 		if rising_edge(VoutClock) then
 			
-			
-			
-			if (VoutPixelCounter < 799) then
-				if (VoutPixelCounter < 639) then -- video data
-					if (VoutLineCounter < 479) then 
-						if (VoutPixelCounter < 160 and VoutLineCounter < 144) then
-							VoutData <= not video_ram(VoutRamCell);
---							VoutRamCell := VoutRamCell + 1;
-						else
-							VoutData <= "00";
+			if (VideoPixel < 976) then
+				if (VideoPixel <= 768) then -- video data
+				
+					if (VideoPixel > 64 and VideoPixel < 705) then
+						VoutData <= not video_ram(VideoRamCell);
+						if (VideoPixel mod 4 = 0) then 
+							VideoRamCell := VideoRamCell + 1;
 						end if;
-					else 
+					else
 						VoutData <= "00";
 					end if;
 				else
 					VoutData <= "00";
-					if (VoutPixelCounter > 655 and VoutPixelCounter < 751) then
+					if (VideoPixel > 792 and VideoPixel < 873) then
 						VoutHSunc <= '0';
 					else
 						VoutHSunc <= '1';
 					end if;
 				end if;
+				VideoPixel := VideoPixel + 1;
 			else
-				VoutLineCounter := VoutLineCounter + 1;
-				VoutPixelCounter := 0;
+				VideoLine := VideoLine + 1;
+				VideoPixel := 1;
+				if ((VideoLine mod 4 /= 0) and VideoRamCell > 159) then
+					VideoRamCell := VideoRamCell - 160;
+				end if;
 			end if;
-			
-			
-			
-			if (VoutLineCounter < 524) then
-				if (VoutLineCounter > 490 and VoutLineCounter < 493) then
+
+			if (VideoLine < 598) then
+				if (VideoLine > 577 and VideoLine < 581) then
 					VoutVSunc <= '0';
 				else
 					VoutVSunc <= '1';
 				end if;
 			else
-				VoutLineCounter := 0;
-				VoutRamCell := 0;
+				VideoLine := 1;
+				VideoRamCell := 0;
 			end if;
-			
-			
-			
-			VoutPixelCounter := VoutPixelCounter + 1;
-			
-			
 			
 		end if;
 	end process;
