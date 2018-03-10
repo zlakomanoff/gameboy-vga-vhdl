@@ -1,0 +1,61 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'VinClock'
+Slack : -3.217
+TNS   : -481.708
+
+Type  : Slow Model Setup 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 25.672
+TNS   : 0.000
+
+Type  : Slow Model Hold 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 0.499
+TNS   : 0.000
+
+Type  : Slow Model Hold 'VinClock'
+Slack : 0.753
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'VinClock'
+Slack : -2.567
+TNS   : -948.157
+
+Type  : Slow Model Minimum Pulse Width 'SourceClock'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 16.933
+TNS   : 0.000
+
+Type  : Fast Model Setup 'VinClock'
+Slack : -1.457
+TNS   : -51.510
+
+Type  : Fast Model Setup 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 35.238
+TNS   : 0.000
+
+Type  : Fast Model Hold 'VinClock'
+Slack : 0.162
+TNS   : 0.000
+
+Type  : Fast Model Hold 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'VinClock'
+Slack : -1.880
+TNS   : -693.022
+
+Type  : Fast Model Minimum Pulse Width 'SourceClock'
+Slack : 10.000
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'u0|altpll_0|sd1|pll|clk[0]'
+Slack : 17.873
+TNS   : 0.000
+
+------------------------------------------------------------
