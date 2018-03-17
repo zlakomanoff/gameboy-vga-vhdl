@@ -1,5 +1,5 @@
 Analysis & Synthesis report for gameboy_vga
-Sun Mar 11 01:39:28 2018
+Sun Mar 18 00:46:15 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,13 +54,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 11 01:39:28 2018           ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 18 00:46:15 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; gameboy_vga                                     ;
 ; Top-level Entity Name              ; gameboy_vga                                     ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 186                                             ;
-;     Total combinational functions  ; 186                                             ;
+; Total logic elements               ; 192                                             ;
+;     Total combinational functions  ; 192                                             ;
 ;     Dedicated logic registers      ; 54                                              ;
 ; Total registers                    ; 54                                              ;
 ; Total pins                         ; 10                                              ;
@@ -200,16 +200,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------------------------------------------+
 ; Resource                                    ; Usage                                         ;
 +---------------------------------------------+-----------------------------------------------+
-; Estimated Total logic elements              ; 186                                           ;
+; Estimated Total logic elements              ; 192                                           ;
 ;                                             ;                                               ;
-; Total combinational functions               ; 186                                           ;
+; Total combinational functions               ; 192                                           ;
 ; Logic element usage by number of LUT inputs ;                                               ;
-;     -- 4 input functions                    ; 91                                            ;
-;     -- 3 input functions                    ; 31                                            ;
-;     -- <=2 input functions                  ; 64                                            ;
+;     -- 4 input functions                    ; 90                                            ;
+;     -- 3 input functions                    ; 12                                            ;
+;     -- <=2 input functions                  ; 90                                            ;
 ;                                             ;                                               ;
 ; Logic elements by mode                      ;                                               ;
-;     -- normal mode                          ; 131                                           ;
+;     -- normal mode                          ; 137                                           ;
 ;     -- arithmetic mode                      ; 55                                            ;
 ;                                             ;                                               ;
 ; Total registers                             ; 54                                            ;
@@ -224,8 +224,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                                               ;
 ; Maximum fan-out node                        ; pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0 ;
 ; Maximum fan-out                             ; 51                                            ;
-; Total fan-out                               ; 1043                                          ;
-; Average fan-out                             ; 3.97                                          ;
+; Total fan-out                               ; 1034                                          ;
+; Average fan-out                             ; 3.84                                          ;
 +---------------------------------------------+-----------------------------------------------+
 
 
@@ -234,7 +234,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------------------+
 ; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                    ; Library Name             ;
 +----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------+--------------------------+
-; |gameboy_vga                           ; 186 (174)         ; 54 (54)      ; 46082       ; 0            ; 0       ; 0         ; 10   ; 0            ; |gameboy_vga                                                                                                           ; work                     ;
+; |gameboy_vga                           ; 192 (180)         ; 54 (54)      ; 46082       ; 0            ; 0       ; 0         ; 10   ; 0            ; |gameboy_vga                                                                                                           ; work                     ;
 ;    |altsyncram:video_ram_rtl_0|        ; 12 (0)            ; 0 (0)        ; 46082       ; 0            ; 0       ; 0         ; 0    ; 0            ; |gameboy_vga|altsyncram:video_ram_rtl_0                                                                                ; work                     ;
 ;       |altsyncram_84d1:auto_generated| ; 12 (0)            ; 0 (0)        ; 46082       ; 0            ; 0       ; 0         ; 0    ; 0            ; |gameboy_vga|altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated                                                 ; work                     ;
 ;          |altsyncram_bng1:altsyncram1| ; 12 (0)            ; 0 (0)        ; 46082       ; 0            ; 0       ; 0         ; 0    ; 0            ; |gameboy_vga|altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1                     ; work                     ;
@@ -292,7 +292,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VoutVSunc~reg0                         ; 2       ;
 ; VoutHSunc~reg0                         ; 2       ;
 ; VideoLine[0]                           ; 2       ;
-; VideoPixel[0]                          ; 4       ;
+; VideoPixel[0]                          ; 7       ;
 ; Total number of inverted registers = 4 ;         ;
 +----------------------------------------+---------+
 
@@ -302,9 +302,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |gameboy_vga|VoutData[1]~reg0 ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |gameboy_vga|VideoRamCell     ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; No         ; |gameboy_vga|VideoRamCell     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |gameboy_vga|VoutData[1]~reg0 ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |gameboy_vga|VideoRamCell     ;
+; 8:1                ; 10 bits   ; 50 LEs        ; 20 LEs               ; 30 LEs                 ; No         ; |gameboy_vga|VideoRamCell     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
@@ -847,18 +847,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 11 01:39:23 2018
+    Info: Processing started: Sun Mar 18 00:46:11 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off gameboy_vga -c gameboy_vga
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12248): Elaborating Qsys system entity "pll.qsys"
-Info (12250): 2018.03.10.18:09:24 Progress: Loading fpga/pll.qsys
-Info (12250): 2018.03.10.18:09:24 Progress: Reading input file
-Info (12250): 2018.03.10.18:09:24 Progress: Adding altpll_0 [altpll 13.0]
-Info (12250): 2018.03.10.18:09:24 Progress: Parameterizing module altpll_0
-Info (12250): 2018.03.10.18:09:24 Progress: Building connections
-Info (12250): 2018.03.10.18:09:24 Progress: Parameterizing connections
-Info (12250): 2018.03.10.18:09:24 Progress: Validating
-Info (12250): 2018.03.10.18:09:24 Progress: Done reading input file
+Info (12250): 2018.03.17.17:16:12 Progress: Loading fpga/pll.qsys
+Info (12250): 2018.03.17.17:16:12 Progress: Reading input file
+Info (12250): 2018.03.17.17:16:12 Progress: Adding altpll_0 [altpll 13.0]
+Info (12250): 2018.03.17.17:16:12 Progress: Parameterizing module altpll_0
+Info (12250): 2018.03.17.17:16:12 Progress: Building connections
+Info (12250): 2018.03.17.17:16:12 Progress: Parameterizing connections
+Info (12250): 2018.03.17.17:16:12 Progress: Validating
+Info (12250): 2018.03.17.17:16:12 Progress: Done reading input file
 Warning (12251): Pll.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
 Warning (12251): Pll.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
 Warning (12251): Pll.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
@@ -955,16 +955,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_hib
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 233 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 239 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 210 logic cells
+    Info (21061): Implemented 216 logic cells
     Info (21064): Implemented 12 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 580 megabytes
-    Info: Processing ended: Sun Mar 11 01:39:28 2018
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 587 megabytes
+    Info: Processing ended: Sun Mar 18 00:46:15 2018
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

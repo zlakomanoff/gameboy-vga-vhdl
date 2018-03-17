@@ -1,5 +1,5 @@
 Fitter report for gameboy_vga
-Sun Mar 11 01:39:31 2018
+Sun Mar 18 00:46:18 2018
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -38,10 +38,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  30. LAB Distinct Inputs
  31. Fitter Device Options
  32. Operating Settings and Conditions
- 33. Estimated Delay Added for Hold Timing Summary
- 34. Estimated Delay Added for Hold Timing Details
- 35. Fitter Messages
- 36. Fitter Suppressed Messages
+ 33. Fitter Messages
+ 34. Fitter Suppressed Messages
 
 
 
@@ -67,15 +65,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Sun Mar 11 01:39:31 2018           ;
+; Fitter Status                      ; Successful - Sun Mar 18 00:46:18 2018           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; gameboy_vga                                     ;
 ; Top-level Entity Name              ; gameboy_vga                                     ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C5T144C8                                     ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 190 / 4,608 ( 4 % )                             ;
-;     Total combinational functions  ; 186 / 4,608 ( 4 % )                             ;
+; Total logic elements               ; 195 / 4,608 ( 4 % )                             ;
+;     Total combinational functions  ; 192 / 4,608 ( 4 % )                             ;
 ;     Dedicated logic registers      ; 54 / 4,608 ( 1 % )                              ;
 ; Total registers                    ; 54                                              ;
 ; Total pins                         ; 10 / 89 ( 11 % )                                ;
@@ -154,8 +152,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 268 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 268 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 275 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 275 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -178,7 +176,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 263     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 270     ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 5       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -194,19 +192,19 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Total logic elements                        ; 190 / 4,608 ( 4 % )       ;
-;     -- Combinational with no register       ; 136                       ;
-;     -- Register only                        ; 4                         ;
-;     -- Combinational with a register        ; 50                        ;
+; Total logic elements                        ; 195 / 4,608 ( 4 % )       ;
+;     -- Combinational with no register       ; 141                       ;
+;     -- Register only                        ; 3                         ;
+;     -- Combinational with a register        ; 51                        ;
 ;                                             ;                           ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 91                        ;
-;     -- 3 input functions                    ; 31                        ;
-;     -- <=2 input functions                  ; 64                        ;
-;     -- Register only                        ; 4                         ;
+;     -- 4 input functions                    ; 90                        ;
+;     -- 3 input functions                    ; 12                        ;
+;     -- <=2 input functions                  ; 90                        ;
+;     -- Register only                        ; 3                         ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 131                       ;
+;     -- normal mode                          ; 137                       ;
 ;     -- arithmetic mode                      ; 55                        ;
 ;                                             ;                           ;
 ; Total registers*                            ; 54 / 4,851 ( 1 % )        ;
@@ -218,22 +216,22 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 ; I/O pins                                    ; 10 / 89 ( 11 % )          ;
 ;     -- Clock pins                           ; 1 / 4 ( 25 % )            ;
 ;                                             ;                           ;
-; Global signals                              ; 1                         ;
+; Global signals                              ; 2                         ;
 ; M4Ks                                        ; 12 / 26 ( 46 % )          ;
 ; Total block memory bits                     ; 46,082 / 119,808 ( 38 % ) ;
 ; Total block memory implementation bits      ; 55,296 / 119,808 ( 46 % ) ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 26 ( 0 % )            ;
 ; PLLs                                        ; 1 / 2 ( 50 % )            ;
-; Global clocks                               ; 1 / 8 ( 13 % )            ;
+; Global clocks                               ; 2 / 8 ( 25 % )            ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )             ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )             ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )             ;
 ; Average interconnect usage (total/H/V)      ; 2% / 2% / 2%              ;
 ; Peak interconnect usage (total/H/V)         ; 3% / 3% / 3%              ;
 ; Maximum fan-out                             ; 51                        ;
-; Highest non-global fan-out                  ; 29                        ;
-; Total fan-out                               ; 1047                      ;
-; Average fan-out                             ; 3.88                      ;
+; Highest non-global fan-out                  ; 30                        ;
+; Total fan-out                               ; 1037                      ;
+; Average fan-out                             ; 3.77                      ;
 +---------------------------------------------+---------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -246,19 +244,19 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 +---------------------------------------------+--------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                ; Low                            ;
 ;                                             ;                    ;                                ;
-; Total logic elements                        ; 190 / 4608 ( 4 % ) ; 0 / 4608 ( 0 % )               ;
-;     -- Combinational with no register       ; 136                ; 0                              ;
-;     -- Register only                        ; 4                  ; 0                              ;
-;     -- Combinational with a register        ; 50                 ; 0                              ;
+; Total logic elements                        ; 195 / 4608 ( 4 % ) ; 0 / 4608 ( 0 % )               ;
+;     -- Combinational with no register       ; 141                ; 0                              ;
+;     -- Register only                        ; 3                  ; 0                              ;
+;     -- Combinational with a register        ; 51                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic element usage by number of LUT inputs ;                    ;                                ;
-;     -- 4 input functions                    ; 91                 ; 0                              ;
-;     -- 3 input functions                    ; 31                 ; 0                              ;
-;     -- <=2 input functions                  ; 64                 ; 0                              ;
-;     -- Register only                        ; 4                  ; 0                              ;
+;     -- 4 input functions                    ; 90                 ; 0                              ;
+;     -- 3 input functions                    ; 12                 ; 0                              ;
+;     -- <=2 input functions                  ; 90                 ; 0                              ;
+;     -- Register only                        ; 3                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Logic elements by mode                      ;                    ;                                ;
-;     -- normal mode                          ; 131                ; 0                              ;
+;     -- normal mode                          ; 137                ; 0                              ;
 ;     -- arithmetic mode                      ; 55                 ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Total registers                             ; 54                 ; 0                              ;
@@ -273,7 +271,7 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 ; Total RAM block bits                        ; 55296              ; 0                              ;
 ; PLL                                         ; 0 / 2 ( 0 % )      ; 1 / 2 ( 50 % )                 ;
 ; M4K                                         ; 12 / 26 ( 46 % )   ; 0 / 26 ( 0 % )                 ;
-; Clock control block                         ; 0 / 10 ( 0 % )     ; 1 / 10 ( 10 % )                ;
+; Clock control block                         ; 1 / 10 ( 10 % )    ; 1 / 10 ( 10 % )                ;
 ;                                             ;                    ;                                ;
 ; Connections                                 ;                    ;                                ;
 ;     -- Input Connections                    ; 51                 ; 1                              ;
@@ -282,8 +280,8 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 ;     -- Registered Output Connections        ; 0                  ; 0                              ;
 ;                                             ;                    ;                                ;
 ; Internal Connections                        ;                    ;                                ;
-;     -- Total Connections                    ; 1058               ; 53                             ;
-;     -- Registered Connections               ; 221                ; 0                              ;
+;     -- Total Connections                    ; 1048               ; 53                             ;
+;     -- Registered Connections               ; 235                ; 0                              ;
 ;                                             ;                    ;                                ;
 ; External Connections                        ;                    ;                                ;
 ;     -- Top                                  ; 0                  ; 52                             ;
@@ -316,11 +314,11 @@ The pin-out file can be found in C:/Dropbox/Projects/GameBoyVGA/fpga/output_file
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Location assigned by ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; SourceClock ; 17    ; 1        ; 0            ; 6            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; VinClock    ; 60    ; 4        ; 14           ; 0            ; 0           ; 27                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; VinClock    ; 60    ; 4        ; 14           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; VinData[0]  ; 70    ; 4        ; 26           ; 0            ; 2           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; VinData[1]  ; 67    ; 4        ; 24           ; 0            ; 0           ; 6                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; VinHSunc    ; 58    ; 4        ; 12           ; 0            ; 0           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; VinVSunc    ; 55    ; 4        ; 9            ; 0            ; 0           ; 16                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; VinHSunc    ; 58    ; 4        ; 12           ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; VinVSunc    ; 55    ; 4        ; 9            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
 
@@ -585,7 +583,7 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------+
 ; Compilation Hierarchy Node             ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                    ; Library Name             ;
 +----------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------------------------------+--------------------------+
-; |gameboy_vga                           ; 190 (178)   ; 54 (54)                   ; 0 (0)         ; 46082       ; 12   ; 0            ; 0       ; 0         ; 10   ; 0            ; 136 (124)    ; 4 (4)             ; 50 (50)          ; |gameboy_vga                                                                                                           ; work                     ;
+; |gameboy_vga                           ; 195 (183)   ; 54 (54)                   ; 0 (0)         ; 46082       ; 12   ; 0            ; 0       ; 0         ; 10   ; 0            ; 141 (129)    ; 3 (3)             ; 51 (51)          ; |gameboy_vga                                                                                                           ; work                     ;
 ;    |altsyncram:video_ram_rtl_0|        ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 46082       ; 12   ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |gameboy_vga|altsyncram:video_ram_rtl_0                                                                                ; work                     ;
 ;       |altsyncram_84d1:auto_generated| ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 46082       ; 12   ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |gameboy_vga|altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated                                                 ; work                     ;
 ;          |altsyncram_bng1:altsyncram1| ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 46082       ; 12   ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |gameboy_vga|altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1                     ; work                     ;
@@ -609,10 +607,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VoutData[1] ; Output   ; --            ; --            ; --                    ; --  ;
 ; SourceClock ; Input    ; --            ; --            ; --                    ; --  ;
 ; VinVSunc    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; VinHSunc    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
-; VinClock    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 ; VinData[0]  ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
 ; VinData[1]  ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; VinHSunc    ; Input    ; (6) 2514 ps   ; (6) 2514 ps   ; --                    ; --  ;
+; VinClock    ; Input    ; (0) 170 ps    ; (0) 170 ps    ; --                    ; --  ;
 +-------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -623,74 +621,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; SourceClock                                                                                                ;                   ;         ;
 ; VinVSunc                                                                                                   ;                   ;         ;
-;      - process_0~0                                                                                         ; 0                 ; 6       ;
-;      - Add0~60                                                                                             ; 0                 ; 6       ;
-;      - Add0~61                                                                                             ; 0                 ; 6       ;
-;      - Add0~62                                                                                             ; 0                 ; 6       ;
-;      - Add0~63                                                                                             ; 0                 ; 6       ;
-;      - Add0~64                                                                                             ; 0                 ; 6       ;
-;      - Add0~65                                                                                             ; 0                 ; 6       ;
-;      - Add0~66                                                                                             ; 0                 ; 6       ;
-;      - Add0~67                                                                                             ; 0                 ; 6       ;
-;      - Add0~68                                                                                             ; 0                 ; 6       ;
-;      - Add0~69                                                                                             ; 0                 ; 6       ;
-;      - Add0~70                                                                                             ; 0                 ; 6       ;
-;      - Add0~71                                                                                             ; 0                 ; 6       ;
-;      - Add0~72                                                                                             ; 0                 ; 6       ;
-;      - Add0~73                                                                                             ; 0                 ; 6       ;
-;      - Add0~74                                                                                             ; 0                 ; 6       ;
-; VinHSunc                                                                                                   ;                   ;         ;
-;      - process_0~0                                                                                         ; 0                 ; 6       ;
-;      - Add0~60                                                                                             ; 0                 ; 6       ;
-;      - Add0~61                                                                                             ; 0                 ; 6       ;
-;      - Add0~62                                                                                             ; 0                 ; 6       ;
-;      - Add0~63                                                                                             ; 0                 ; 6       ;
-;      - Add0~64                                                                                             ; 0                 ; 6       ;
-;      - Add0~65                                                                                             ; 0                 ; 6       ;
-;      - Add0~66                                                                                             ; 0                 ; 6       ;
-;      - Add0~67                                                                                             ; 0                 ; 6       ;
-;      - Add0~68                                                                                             ; 0                 ; 6       ;
-;      - Add0~69                                                                                             ; 0                 ; 6       ;
-;      - Add0~70                                                                                             ; 0                 ; 6       ;
-;      - Add0~71                                                                                             ; 0                 ; 6       ;
-;      - Add0~72                                                                                             ; 0                 ; 6       ;
-;      - Add0~73                                                                                             ; 0                 ; 6       ;
-;      - Add0~74                                                                                             ; 0                 ; 6       ;
-; VinClock                                                                                                   ;                   ;         ;
-;      - ram_cell[0]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[1]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[2]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[3]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[4]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[5]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[6]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[7]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[8]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[9]                                                                                         ; 0                 ; 0       ;
-;      - ram_cell[10]                                                                                        ; 0                 ; 0       ;
-;      - ram_cell[11]                                                                                        ; 0                 ; 0       ;
-;      - ram_cell[12]                                                                                        ; 0                 ; 0       ;
-;      - ram_cell[13]                                                                                        ; 0                 ; 0       ;
-;      - ram_cell[14]                                                                                        ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a0  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a1  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a2  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a3  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a4  ; 1                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a5  ; 1                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6  ; 1                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a7  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a8  ; 0                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a9  ; 1                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a10 ; 1                 ; 0       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a11 ; 0                 ; 0       ;
+;      - process_0~2                                                                                         ; 1                 ; 6       ;
 ; VinData[0]                                                                                                 ;                   ;         ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a0  ; 1                 ; 6       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a2  ; 1                 ; 6       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a4  ; 1                 ; 6       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6  ; 1                 ; 6       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a8  ; 1                 ; 6       ;
-;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a10 ; 1                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a0  ; 0                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a2  ; 0                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a4  ; 0                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6  ; 0                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a8  ; 0                 ; 6       ;
+;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a10 ; 0                 ; 6       ;
 ; VinData[1]                                                                                                 ;                   ;         ;
 ;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a1  ; 0                 ; 6       ;
 ;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a3  ; 0                 ; 6       ;
@@ -698,40 +636,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a7  ; 0                 ; 6       ;
 ;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a9  ; 0                 ; 6       ;
 ;      - altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a11 ; 0                 ; 6       ;
+; VinHSunc                                                                                                   ;                   ;         ;
+;      - FakeClock                                                                                           ; 0                 ; 6       ;
+; VinClock                                                                                                   ;                   ;         ;
+;      - FakeClock                                                                                           ; 0                 ; 0       ;
 +------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                                      ;
-+----------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                                       ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; LessThan0~0                                                                                                                ; LCCOMB_X20_Y7_N2  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; SourceClock                                                                                                                ; PIN_17            ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; VinClock                                                                                                                   ; PIN_60            ; 27      ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode205w[3]~0  ; LCCOMB_X20_Y7_N8  ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode222w[3]    ; LCCOMB_X22_Y7_N4  ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode232w[3]    ; LCCOMB_X22_Y7_N26 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode242w[3]    ; LCCOMB_X20_Y7_N18 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode252w[3]    ; LCCOMB_X22_Y5_N12 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode262w[3]~0  ; LCCOMB_X20_Y5_N26 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode205w[3]~0 ; LCCOMB_X22_Y5_N26 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode222w[3]   ; LCCOMB_X22_Y5_N4  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode232w[3]~0 ; LCCOMB_X22_Y5_N8  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode242w[3]   ; LCCOMB_X22_Y5_N14 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode252w[3]   ; LCCOMB_X22_Y5_N22 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode262w[3]~0 ; LCCOMB_X22_Y5_N16 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0                                                                              ; PLL_1             ; 51      ; Clock                      ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-+----------------------------------------------------------------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                       ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
+; FakeClock                                                                                                                  ; LCCOMB_X27_Y7_N6   ; 27      ; Clock                      ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; LessThan1~2                                                                                                                ; LCCOMB_X19_Y5_N22  ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; SourceClock                                                                                                                ; PIN_17             ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode205w[3]~0  ; LCCOMB_X24_Y10_N26 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode222w[3]    ; LCCOMB_X24_Y10_N2  ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode232w[3]~0  ; LCCOMB_X24_Y10_N0  ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode242w[3]~0  ; LCCOMB_X24_Y6_N0   ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode252w[3]    ; LCCOMB_X24_Y10_N18 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode262w[3]~0  ; LCCOMB_X24_Y10_N16 ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode205w[3]~0 ; LCCOMB_X21_Y6_N0   ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode222w[3]   ; LCCOMB_X21_Y6_N4   ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode232w[3]~0 ; LCCOMB_X21_Y6_N2   ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode242w[3]   ; LCCOMB_X21_Y6_N20  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode252w[3]   ; LCCOMB_X21_Y6_N16  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode262w[3]~0 ; LCCOMB_X21_Y6_N14  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0                                                                              ; PLL_1              ; 51      ; Clock                      ; yes    ; Global Clock         ; GCLK3            ; --                        ;
++----------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                              ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; Name                                          ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
-; pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0 ; PLL_1    ; 51      ; Global Clock         ; GCLK3            ; --                        ;
-+-----------------------------------------------+----------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                      ;
++-----------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; Name                                          ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; FakeClock                                     ; LCCOMB_X27_Y7_N6 ; 27      ; Global Clock         ; GCLK4            ; --                        ;
+; pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0 ; PLL_1            ; 51      ; Global Clock         ; GCLK3            ; --                        ;
++-----------------------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -739,66 +682,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                       ; Fan-Out ;
 +----------------------------------------------------------------------------------------------------------------------------+---------+
-; VoutHSunc~0                                                                                                                ; 29      ;
-; VinClock                                                                                                                   ; 27      ;
-; LessThan7~3                                                                                                                ; 21      ;
-; VideoPixel[9]                                                                                                              ; 18      ;
-; VideoPixel[8]                                                                                                              ; 18      ;
-; VinHSunc                                                                                                                   ; 16      ;
-; VinVSunc                                                                                                                   ; 16      ;
-; process_1~0                                                                                                                ; 16      ;
-; Add0~71                                                                                                                    ; 13      ;
-; Add0~70                                                                                                                    ; 13      ;
-; Add0~69                                                                                                                    ; 13      ;
-; Add0~68                                                                                                                    ; 13      ;
-; Add0~67                                                                                                                    ; 13      ;
-; Add0~66                                                                                                                    ; 13      ;
-; Add0~65                                                                                                                    ; 13      ;
-; Add0~64                                                                                                                    ; 13      ;
-; Add0~63                                                                                                                    ; 13      ;
-; Add0~62                                                                                                                    ; 13      ;
-; Add0~61                                                                                                                    ; 13      ;
-; Add0~60                                                                                                                    ; 13      ;
-; Add4~46                                                                                                                    ; 13      ;
-; Add4~44                                                                                                                    ; 13      ;
-; Add4~42                                                                                                                    ; 13      ;
-; Add4~40                                                                                                                    ; 13      ;
-; Add4~38                                                                                                                    ; 13      ;
-; Add4~36                                                                                                                    ; 13      ;
-; Add4~34                                                                                                                    ; 13      ;
-; VideoRamCell~14                                                                                                            ; 13      ;
-; VideoRamCell~13                                                                                                            ; 13      ;
+; LessThan8~2                                                                                                                ; 30      ;
+; VoutHSunc~0                                                                                                                ; 27      ;
+; process_0~2                                                                                                                ; 21      ;
+; VideoRamCell~0                                                                                                             ; 17      ;
+; VideoPixel[9]                                                                                                              ; 16      ;
+; VideoPixel[8]                                                                                                              ; 16      ;
+; Add0~41                                                                                                                    ; 13      ;
+; Add0~40                                                                                                                    ; 13      ;
+; Add0~39                                                                                                                    ; 13      ;
+; Add0~38                                                                                                                    ; 13      ;
+; Add0~37                                                                                                                    ; 13      ;
+; Add0~36                                                                                                                    ; 13      ;
+; Add0~35                                                                                                                    ; 13      ;
+; Add0~34                                                                                                                    ; 13      ;
+; Add0~33                                                                                                                    ; 13      ;
+; Add0~32                                                                                                                    ; 13      ;
+; Add0~31                                                                                                                    ; 13      ;
+; Add0~30                                                                                                                    ; 13      ;
+; Add4~39                                                                                                                    ; 13      ;
+; Add4~37                                                                                                                    ; 13      ;
+; Add4~35                                                                                                                    ; 13      ;
+; Add4~33                                                                                                                    ; 13      ;
+; Add4~31                                                                                                                    ; 13      ;
+; Add4~29                                                                                                                    ; 13      ;
+; Add4~27                                                                                                                    ; 13      ;
 ; VideoRamCell~12                                                                                                            ; 13      ;
 ; VideoRamCell~11                                                                                                            ; 13      ;
 ; VideoRamCell~10                                                                                                            ; 13      ;
-; VideoRamCell~8                                                                                                             ; 12      ;
-; LessThan7~2                                                                                                                ; 12      ;
-; VideoRamCell[12]                                                                                                           ; 11      ;
-; VideoRamCell[13]                                                                                                           ; 11      ;
-; LessThan7~1                                                                                                                ; 11      ;
-; LessThan7~0                                                                                                                ; 11      ;
-; LessThan0~0                                                                                                                ; 8       ;
-; Add4~31                                                                                                                    ; 7       ;
-; VideoPixel[7]                                                                                                              ; 7       ;
-; VideoPixel[6]                                                                                                              ; 7       ;
-; Add0~58                                                                                                                    ; 7       ;
-; Add0~56                                                                                                                    ; 7       ;
-; Add0~54                                                                                                                    ; 7       ;
+; VideoRamCell~9                                                                                                             ; 13      ;
+; VideoRamCell~8                                                                                                             ; 13      ;
+; LessThan1~2                                                                                                                ; 10      ;
+; VideoRamCell[13]                                                                                                           ; 10      ;
+; VideoRamCell[12]                                                                                                           ; 9       ;
+; VideoRamCell~13                                                                                                            ; 7       ;
+; Add4~25                                                                                                                    ; 7       ;
+; Add4~23                                                                                                                    ; 7       ;
+; Add4~21                                                                                                                    ; 7       ;
+; VideoRamCell[14]                                                                                                           ; 7       ;
+; VideoPixel[0]                                                                                                              ; 7       ;
+; Add0~28                                                                                                                    ; 7       ;
+; Add0~26                                                                                                                    ; 7       ;
+; Add0~24                                                                                                                    ; 7       ;
 ; VinData[1]                                                                                                                 ; 6       ;
 ; VinData[0]                                                                                                                 ; 6       ;
-; Add4~32                                                                                                                    ; 6       ;
-; Add4~28                                                                                                                    ; 6       ;
-; process_0~0                                                                                                                ; 6       ;
-; VideoRamCell[14]                                                                                                           ; 6       ;
-; VideoRamCell~9                                                                                                             ; 5       ;
+; VideoPixel[7]                                                                                                              ; 6       ;
+; VideoPixel[6]                                                                                                              ; 6       ;
+; VideoRamCell~7                                                                                                             ; 5       ;
+; VideoPixel[3]                                                                                                              ; 5       ;
+; VideoPixel[1]                                                                                                              ; 5       ;
 ; VideoPixel[5]                                                                                                              ; 5       ;
 ; VideoPixel[4]                                                                                                              ; 5       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode222w[3]    ; 4       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode205w[3]~0  ; 4       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode262w[3]~0  ; 4       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode252w[3]    ; 4       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode242w[3]    ; 4       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode232w[3]    ; 4       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode262w[3]~0  ; 4       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode205w[3]~0  ; 4       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode232w[3]~0  ; 4       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode222w[3]    ; 4       ;
+; VideoRamCell~6                                                                                                             ; 4       ;
+; VideoRamCell~2                                                                                                             ; 4       ;
 ; VideoRamCell[5]                                                                                                            ; 4       ;
 ; VideoRamCell[6]                                                                                                            ; 4       ;
 ; VideoRamCell[7]                                                                                                            ; 4       ;
@@ -806,40 +747,54 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VideoRamCell[9]                                                                                                            ; 4       ;
 ; VideoRamCell[10]                                                                                                           ; 4       ;
 ; VideoRamCell[11]                                                                                                           ; 4       ;
-; VideoPixel[0]                                                                                                              ; 4       ;
-; VideoPixel[1]                                                                                                              ; 4       ;
-; LessThan2~1                                                                                                                ; 3       ;
-; VideoPixel[2]                                                                                                              ; 3       ;
-; VideoPixel[3]                                                                                                              ; 3       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode4|w_anode242w[3]~0  ; 4       ;
+; VideoPixel[2]                                                                                                              ; 4       ;
+; process_1~8                                                                                                                ; 3       ;
+; process_1~6                                                                                                                ; 3       ;
+; process_1~4                                                                                                                ; 3       ;
+; VideoLine~8                                                                                                                ; 3       ;
 ; VideoLine~7                                                                                                                ; 3       ;
 ; VideoLine~6                                                                                                                ; 3       ;
 ; VideoLine~5                                                                                                                ; 3       ;
-; VideoLine~4                                                                                                                ; 3       ;
+; LessThan8~1                                                                                                                ; 3       ;
 ; VideoLine~3                                                                                                                ; 3       ;
 ; VideoLine[9]                                                                                                               ; 3       ;
 ; VideoLine~2                                                                                                                ; 3       ;
 ; VideoLine~1                                                                                                                ; 3       ;
 ; VideoLine~0                                                                                                                ; 3       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode222w[3]   ; 2       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode205w[3]~0 ; 2       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode262w[3]~0 ; 2       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode252w[3]   ; 2       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode242w[3]   ; 2       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode262w[3]~0 ; 2       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode205w[3]~0 ; 2       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode232w[3]~0 ; 2       ;
-; Add4~26                                                                                                                    ; 2       ;
-; VideoRamCell~7                                                                                                             ; 2       ;
-; VideoRamCell~5                                                                                                             ; 2       ;
-; Add4~24                                                                                                                    ; 2       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode222w[3]   ; 2       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|decode_7oa:decode_a|w_anode242w[3]   ; 2       ;
+; VideoRamCell~1                                                                                                             ; 2       ;
 ; VideoRamCell[0]                                                                                                            ; 2       ;
 ; VideoRamCell[1]                                                                                                            ; 2       ;
 ; VideoRamCell[2]                                                                                                            ; 2       ;
 ; VideoRamCell[3]                                                                                                            ; 2       ;
 ; VideoRamCell[4]                                                                                                            ; 2       ;
-; VoutData~0                                                                                                                 ; 2       ;
-; VoutHSunc~1                                                                                                                ; 2       ;
-; LessThan2~0                                                                                                                ; 2       ;
+; ram_cell[13]                                                                                                               ; 2       ;
+; ram_cell[12]                                                                                                               ; 2       ;
+; ram_cell[11]                                                                                                               ; 2       ;
+; ram_cell[10]                                                                                                               ; 2       ;
+; ram_cell[14]                                                                                                               ; 2       ;
+; ram_cell[9]                                                                                                                ; 2       ;
+; ram_cell[8]                                                                                                                ; 2       ;
+; ram_cell[3]                                                                                                                ; 2       ;
+; ram_cell[2]                                                                                                                ; 2       ;
+; ram_cell[1]                                                                                                                ; 2       ;
+; ram_cell[0]                                                                                                                ; 2       ;
+; ram_cell[4]                                                                                                                ; 2       ;
+; ram_cell[5]                                                                                                                ; 2       ;
+; ram_cell[6]                                                                                                                ; 2       ;
+; ram_cell[7]                                                                                                                ; 2       ;
+; VoutData~4                                                                                                                 ; 2       ;
+; process_1~3                                                                                                                ; 2       ;
 ; VideoLine~9                                                                                                                ; 2       ;
-; VideoLine~8                                                                                                                ; 2       ;
+; process_1~0                                                                                                                ; 2       ;
+; VideoLine~4                                                                                                                ; 2       ;
+; LessThan8~0                                                                                                                ; 2       ;
 ; VideoLine[8]                                                                                                               ; 2       ;
 ; VideoLine[0]                                                                                                               ; 2       ;
 ; VideoLine[1]                                                                                                               ; 2       ;
@@ -854,13 +809,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add3~18                                                                                                                    ; 2       ;
 ; Add3~2                                                                                                                     ; 2       ;
 ; Add3~0                                                                                                                     ; 2       ;
+; VinClock                                                                                                                   ; 1       ;
+; VinHSunc                                                                                                                   ; 1       ;
+; VinVSunc                                                                                                                   ; 1       ;
 ; SourceClock                                                                                                                ; 1       ;
-; Add0~74                                                                                                                    ; 1       ;
-; Add0~73                                                                                                                    ; 1       ;
-; Add0~72                                                                                                                    ; 1       ;
-; Add4~49                                                                                                                    ; 1       ;
-; Add4~48                                                                                                                    ; 1       ;
-; Add4~47                                                                                                                    ; 1       ;
 ; Add2~49                                                                                                                    ; 1       ;
 ; Add2~48                                                                                                                    ; 1       ;
 ; Add2~47                                                                                                                    ; 1       ;
@@ -871,36 +823,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add2~42                                                                                                                    ; 1       ;
 ; Add2~41                                                                                                                    ; 1       ;
 ; Add2~40                                                                                                                    ; 1       ;
-; Add4~45                                                                                                                    ; 1       ;
-; Add4~43                                                                                                                    ; 1       ;
+; Add0~44                                                                                                                    ; 1       ;
+; Add0~43                                                                                                                    ; 1       ;
+; Add0~42                                                                                                                    ; 1       ;
+; Add4~42                                                                                                                    ; 1       ;
 ; Add4~41                                                                                                                    ; 1       ;
-; Add4~39                                                                                                                    ; 1       ;
-; Add4~37                                                                                                                    ; 1       ;
-; Add4~35                                                                                                                    ; 1       ;
-; Add4~33                                                                                                                    ; 1       ;
-; ram_cell[13]                                                                                                               ; 1       ;
-; ram_cell[14]                                                                                                               ; 1       ;
-; ram_cell[0]                                                                                                                ; 1       ;
-; ram_cell[1]                                                                                                                ; 1       ;
-; ram_cell[2]                                                                                                                ; 1       ;
-; ram_cell[3]                                                                                                                ; 1       ;
-; ram_cell[4]                                                                                                                ; 1       ;
-; ram_cell[5]                                                                                                                ; 1       ;
-; ram_cell[6]                                                                                                                ; 1       ;
-; ram_cell[7]                                                                                                                ; 1       ;
-; ram_cell[8]                                                                                                                ; 1       ;
-; ram_cell[9]                                                                                                                ; 1       ;
-; ram_cell[10]                                                                                                               ; 1       ;
-; ram_cell[11]                                                                                                               ; 1       ;
-; ram_cell[12]                                                                                                               ; 1       ;
-; Add4~27                                                                                                                    ; 1       ;
-; Add4~25                                                                                                                    ; 1       ;
-; VideoRamCell~6                                                                                                             ; 1       ;
+; Add4~40                                                                                                                    ; 1       ;
+; Add4~38                                                                                                                    ; 1       ;
+; Add4~36                                                                                                                    ; 1       ;
+; Add4~34                                                                                                                    ; 1       ;
+; Add4~32                                                                                                                    ; 1       ;
+; Add4~30                                                                                                                    ; 1       ;
+; Add4~28                                                                                                                    ; 1       ;
+; Add4~26                                                                                                                    ; 1       ;
+; Add4~24                                                                                                                    ; 1       ;
+; Add4~22                                                                                                                    ; 1       ;
+; VideoRamCell~5                                                                                                             ; 1       ;
 ; VideoRamCell~4                                                                                                             ; 1       ;
 ; VideoRamCell~3                                                                                                             ; 1       ;
-; VideoRamCell~2                                                                                                             ; 1       ;
-; VideoRamCell~1                                                                                                             ; 1       ;
-; VideoRamCell~0                                                                                                             ; 1       ;
+; Add4~20                                                                                                                    ; 1       ;
+; process_0~1                                                                                                                ; 1       ;
+; LessThan0~1                                                                                                                ; 1       ;
+; process_0~0                                                                                                                ; 1       ;
+; LessThan0~0                                                                                                                ; 1       ;
 ; VideoLine~19                                                                                                               ; 1       ;
 ; VideoLine~18                                                                                                               ; 1       ;
 ; VideoLine~17                                                                                                               ; 1       ;
@@ -911,59 +856,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VideoLine~12                                                                                                               ; 1       ;
 ; VideoLine~11                                                                                                               ; 1       ;
 ; VideoLine~10                                                                                                               ; 1       ;
+; VoutData~11                                                                                                                ; 1       ;
 ; VoutData~10                                                                                                                ; 1       ;
 ; VoutData~9                                                                                                                 ; 1       ;
 ; VoutData~8                                                                                                                 ; 1       ;
 ; VoutData~7                                                                                                                 ; 1       ;
 ; VoutData~6                                                                                                                 ; 1       ;
 ; VoutData~5                                                                                                                 ; 1       ;
-; VoutData~4                                                                                                                 ; 1       ;
+; process_1~7                                                                                                                ; 1       ;
+; process_1~5                                                                                                                ; 1       ;
+; LessThan3~0                                                                                                                ; 1       ;
 ; VoutData~3                                                                                                                 ; 1       ;
 ; VoutData~2                                                                                                                 ; 1       ;
 ; VoutData~1                                                                                                                 ; 1       ;
-; process_1~5                                                                                                                ; 1       ;
+; VoutData~0                                                                                                                 ; 1       ;
+; VoutHSunc~4                                                                                                                ; 1       ;
 ; VoutHSunc~3                                                                                                                ; 1       ;
 ; VoutHSunc~2                                                                                                                ; 1       ;
-; process_1~4                                                                                                                ; 1       ;
-; process_1~3                                                                                                                ; 1       ;
+; VoutHSunc~1                                                                                                                ; 1       ;
 ; VoutVSunc~0                                                                                                                ; 1       ;
 ; process_1~2                                                                                                                ; 1       ;
 ; process_1~1                                                                                                                ; 1       ;
 ; VoutData[1]~reg0                                                                                                           ; 1       ;
 ; VoutData[0]~reg0                                                                                                           ; 1       ;
-; Add4~29                                                                                                                    ; 1       ;
-; Add1~28                                                                                                                    ; 1       ;
-; Add0~57                                                                                                                    ; 1       ;
-; Add0~55                                                                                                                    ; 1       ;
-; Add0~53                                                                                                                    ; 1       ;
-; Add0~52                                                                                                                    ; 1       ;
-; Add0~51                                                                                                                    ; 1       ;
-; Add0~50                                                                                                                    ; 1       ;
-; Add0~49                                                                                                                    ; 1       ;
-; Add0~48                                                                                                                    ; 1       ;
-; Add0~47                                                                                                                    ; 1       ;
-; Add0~46                                                                                                                    ; 1       ;
-; Add0~45                                                                                                                    ; 1       ;
-; Add0~44                                                                                                                    ; 1       ;
-; Add0~43                                                                                                                    ; 1       ;
-; Add0~42                                                                                                                    ; 1       ;
-; Add0~41                                                                                                                    ; 1       ;
-; Add0~40                                                                                                                    ; 1       ;
-; Add0~39                                                                                                                    ; 1       ;
-; Add0~38                                                                                                                    ; 1       ;
-; Add0~37                                                                                                                    ; 1       ;
-; Add0~36                                                                                                                    ; 1       ;
-; Add0~35                                                                                                                    ; 1       ;
-; Add0~34                                                                                                                    ; 1       ;
-; Add0~33                                                                                                                    ; 1       ;
-; Add0~32                                                                                                                    ; 1       ;
-; Add0~31                                                                                                                    ; 1       ;
-; Add0~30                                                                                                                    ; 1       ;
-; Add4~23                                                                                                                    ; 1       ;
-; Add4~22                                                                                                                    ; 1       ;
-; Add4~21                                                                                                                    ; 1       ;
-; Add4~20                                                                                                                    ; 1       ;
-; Add4~19                                                                                                                    ; 1       ;
 ; Add4~18                                                                                                                    ; 1       ;
 ; Add4~17                                                                                                                    ; 1       ;
 ; Add4~16                                                                                                                    ; 1       ;
@@ -977,6 +892,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add4~8                                                                                                                     ; 1       ;
 ; Add4~7                                                                                                                     ; 1       ;
 ; Add4~6                                                                                                                     ; 1       ;
+; Add4~5                                                                                                                     ; 1       ;
+; Add4~4                                                                                                                     ; 1       ;
+; Add4~3                                                                                                                     ; 1       ;
+; Add4~2                                                                                                                     ; 1       ;
+; Add4~1                                                                                                                     ; 1       ;
+; Add4~0                                                                                                                     ; 1       ;
+; Add1~28                                                                                                                    ; 1       ;
 ; Add1~27                                                                                                                    ; 1       ;
 ; Add1~26                                                                                                                    ; 1       ;
 ; Add1~25                                                                                                                    ; 1       ;
@@ -1005,6 +927,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Add1~2                                                                                                                     ; 1       ;
 ; Add1~1                                                                                                                     ; 1       ;
 ; Add1~0                                                                                                                     ; 1       ;
+; Add0~27                                                                                                                    ; 1       ;
+; Add0~25                                                                                                                    ; 1       ;
+; Add0~23                                                                                                                    ; 1       ;
+; Add0~22                                                                                                                    ; 1       ;
+; Add0~21                                                                                                                    ; 1       ;
+; Add0~20                                                                                                                    ; 1       ;
+; Add0~19                                                                                                                    ; 1       ;
+; Add0~18                                                                                                                    ; 1       ;
+; Add0~17                                                                                                                    ; 1       ;
+; Add0~16                                                                                                                    ; 1       ;
+; Add0~15                                                                                                                    ; 1       ;
+; Add0~14                                                                                                                    ; 1       ;
+; Add0~13                                                                                                                    ; 1       ;
+; Add0~12                                                                                                                    ; 1       ;
+; Add0~11                                                                                                                    ; 1       ;
+; Add0~10                                                                                                                    ; 1       ;
+; Add0~9                                                                                                                     ; 1       ;
+; Add0~8                                                                                                                     ; 1       ;
+; Add0~7                                                                                                                     ; 1       ;
+; Add0~6                                                                                                                     ; 1       ;
+; Add0~5                                                                                                                     ; 1       ;
+; Add0~4                                                                                                                     ; 1       ;
+; Add0~3                                                                                                                     ; 1       ;
+; Add0~2                                                                                                                     ; 1       ;
+; Add0~1                                                                                                                     ; 1       ;
+; Add0~0                                                                                                                     ; 1       ;
 ; Add2~38                                                                                                                    ; 1       ;
 ; Add2~37                                                                                                                    ; 1       ;
 ; Add2~36                                                                                                                    ; 1       ;
@@ -1030,12 +978,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a9                         ; 1       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a7                         ; 1       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a5                         ; 1       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a2                         ; 1       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a0                         ; 1       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a10                        ; 1       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a8                         ; 1       ;
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6                         ; 1       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a10                        ; 1       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a0                         ; 1       ;
 ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a4                         ; 1       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a2                         ; 1       ;
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6                         ; 1       ;
 ; Add3~17                                                                                                                    ; 1       ;
 ; Add3~16                                                                                                                    ; 1       ;
 ; Add3~15                                                                                                                    ; 1       ;
@@ -1055,74 +1003,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
-+--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
-; Name                                                                                             ; Type ; Mode           ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                                                                                                       ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
-+--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
-; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 23041        ; 2            ; 23041        ; 2            ; yes                    ; no                      ; yes                    ; no                      ; 46082 ; 23041                       ; 2                           ; 23041                       ; 2                           ; 46082               ; 12   ; None ; M4K_X23_Y6, M4K_X11_Y6, M4K_X23_Y2, M4K_X11_Y5, M4K_X23_Y7, M4K_X23_Y4, M4K_X23_Y3, M4K_X23_Y9, M4K_X23_Y5, M4K_X23_Y1, M4K_X11_Y7, M4K_X23_Y8 ; Don't care           ; Don't care      ; Don't care      ;
-+--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
+; Name                                                                                             ; Type ; Mode           ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                                                                                                          ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
++--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
+; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 23041        ; 2            ; 23041        ; 2            ; yes                    ; no                      ; yes                    ; no                      ; 46082 ; 23041                       ; 2                           ; 23041                       ; 2                           ; 46082               ; 12   ; None ; M4K_X23_Y3, M4K_X11_Y10, M4K_X23_Y7, M4K_X23_Y10, M4K_X23_Y6, M4K_X23_Y11, M4K_X23_Y4, M4K_X23_Y2, M4K_X11_Y9, M4K_X23_Y5, M4K_X23_Y9, M4K_X23_Y8 ; Don't care           ; Don't care      ; Don't care      ;
++--------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+---------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
-+------------------------------------------------------+
-; Other Routing Usage Summary                          ;
-+-----------------------------+------------------------+
-; Other Routing Resource Type ; Usage                  ;
-+-----------------------------+------------------------+
-; Block interconnects         ; 561 / 15,666 ( 4 % )   ;
-; C16 interconnects           ; 8 / 812 ( < 1 % )      ;
-; C4 interconnects            ; 240 / 11,424 ( 2 % )   ;
-; Direct links                ; 108 / 15,666 ( < 1 % ) ;
-; Global clocks               ; 1 / 8 ( 13 % )         ;
-; Local interconnects         ; 81 / 4,608 ( 2 % )     ;
-; R24 interconnects           ; 9 / 652 ( 1 % )        ;
-; R4 interconnects            ; 312 / 13,328 ( 2 % )   ;
-+-----------------------------+------------------------+
++-----------------------------------------------------+
+; Other Routing Usage Summary                         ;
++-----------------------------+-----------------------+
+; Other Routing Resource Type ; Usage                 ;
++-----------------------------+-----------------------+
+; Block interconnects         ; 514 / 15,666 ( 3 % )  ;
+; C16 interconnects           ; 7 / 812 ( < 1 % )     ;
+; C4 interconnects            ; 209 / 11,424 ( 2 % )  ;
+; Direct links                ; 99 / 15,666 ( < 1 % ) ;
+; Global clocks               ; 2 / 8 ( 25 % )        ;
+; Local interconnects         ; 104 / 4,608 ( 2 % )   ;
+; R24 interconnects           ; 10 / 652 ( 2 % )      ;
+; R4 interconnects            ; 313 / 13,328 ( 2 % )  ;
++-----------------------------+-----------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.67) ; Number of LABs  (Total = 15) ;
+; Number of Logic Elements  (Average = 13.00) ; Number of LABs  (Total = 15) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
+; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 2                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 0                            ;
-; 11                                          ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 1                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 0                            ;
+; 13                                          ; 1                            ;
 ; 14                                          ; 0                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 8                            ;
+; 15                                          ; 1                            ;
+; 16                                          ; 9                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.93) ; Number of LABs  (Total = 15) ;
+; LAB-wide Signals  (Average = 0.87) ; Number of LABs  (Total = 15) ;
 +------------------------------------+------------------------------+
 ; 1 Clock                            ; 13                           ;
-; 1 Clock enable                     ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.20) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced  (Average = 16.47) ; Number of LABs  (Total = 15) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 1                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 0                            ;
 ; 3                                            ; 0                            ;
 ; 4                                            ; 0                            ;
 ; 5                                            ; 0                            ;
@@ -1130,83 +1077,85 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
 ; 9                                            ; 0                            ;
-; 10                                           ; 2                            ;
-; 11                                           ; 2                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 4                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 2                            ;
+; 16                                           ; 0                            ;
+; 17                                           ; 2                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 2                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 1                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 22                                           ; 2                            ;
+; 23                                           ; 1                            ;
+; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 26                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +---------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                         ;
 +--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 10.80) ; Number of LABs  (Total = 15) ;
+; Number of Signals Sourced Out  (Average = 10.40) ; Number of LABs  (Total = 15) ;
 +--------------------------------------------------+------------------------------+
 ; 0                                                ; 0                            ;
-; 1                                                ; 0                            ;
-; 2                                                ; 2                            ;
+; 1                                                ; 2                            ;
+; 2                                                ; 0                            ;
 ; 3                                                ; 0                            ;
-; 4                                                ; 0                            ;
-; 5                                                ; 1                            ;
-; 6                                                ; 0                            ;
-; 7                                                ; 1                            ;
+; 4                                                ; 1                            ;
+; 5                                                ; 0                            ;
+; 6                                                ; 1                            ;
+; 7                                                ; 0                            ;
 ; 8                                                ; 1                            ;
-; 9                                                ; 1                            ;
-; 10                                               ; 0                            ;
-; 11                                               ; 0                            ;
-; 12                                               ; 2                            ;
-; 13                                               ; 1                            ;
+; 9                                                ; 0                            ;
+; 10                                               ; 4                            ;
+; 11                                               ; 1                            ;
+; 12                                               ; 1                            ;
+; 13                                               ; 0                            ;
 ; 14                                               ; 0                            ;
-; 15                                               ; 4                            ;
-; 16                                               ; 2                            ;
+; 15                                               ; 1                            ;
+; 16                                               ; 0                            ;
+; 17                                               ; 1                            ;
+; 18                                               ; 0                            ;
+; 19                                               ; 0                            ;
+; 20                                               ; 1                            ;
+; 21                                               ; 1                            ;
 +--------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 14.47) ; Number of LABs  (Total = 15) ;
+; Number of Distinct Inputs  (Average = 12.27) ; Number of LABs  (Total = 15) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
-; 7                                            ; 3                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 0                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 2                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 0                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 2                            ;
 ; 16                                           ; 1                            ;
-; 17                                           ; 5                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 0                            ;
+; 21                                           ; 1                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 1                            ;
+; 23                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1239,27 +1188,6 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; I/O             ; VinClock             ; 3.1               ;
-+-----------------+----------------------+-------------------+
-Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
-This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                                                                ;
-+-----------------+------------------------------------------------------------------------------------------------------------------------+-------------------+
-; Source Register ; Destination Register                                                                                                   ; Delay Added in ns ;
-+-----------------+------------------------------------------------------------------------------------------------------------------------+-------------------+
-; VinClock        ; altsyncram:video_ram_rtl_0|altsyncram_84d1:auto_generated|altsyncram_bng1:altsyncram1|ram_block2a6~portb_address_reg11 ; 0.645             ;
-+-----------------+------------------------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
-
-
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
@@ -1286,6 +1214,8 @@ Info (332144): No user constrained base clocks found in the design
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node pll:u0|pll_altpll_0:altpll_0|altpll:sd1|_clk0 (placed in counter C0 of PLL_1)
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
+Info (176353): Automatically promoted node FakeClock 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1301,7 +1231,7 @@ Info (170195): Router estimated average interconnect usage is 2% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.19 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 4 output pins without output pin load capacitance assignment
     Info (306007): Pin "VoutVSunc" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1311,14 +1241,14 @@ Warning (306006): Found 4 output pins without output pin load capacitance assign
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (176045): Design uses memory blocks. Violating setup or hold times of memory block address registers for either read or write operations could cause memory contents to be corrupted. Make sure that all memory block address registers meet the setup and hold time requirements.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Dropbox/Projects/GameBoyVGA/fpga/output_files/gameboy_vga.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
     Info: Peak virtual memory: 752 megabytes
-    Info: Processing ended: Sun Mar 11 01:39:31 2018
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Sun Mar 18 00:46:18 2018
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

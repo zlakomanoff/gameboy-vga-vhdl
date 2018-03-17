@@ -3,28 +3,28 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 -- Video Input Pins
--- 55 VSunc
--- 58 HSunc
+-- 55 VSync
+-- 58 HSync
 -- 60 Clock
 -- 67 DATA0
 -- 70 DATA1
 
 -- Video Output Pins
 -- 17  Clock
--- 115 VSunc
--- 119 HSunc
+-- 115 VSync
+-- 119 HSync
 -- 125 DATA0
 -- 135 DATA1
 
 entity gameboy_vga is 
 	port(
-		VinVSunc  : in std_logic;
-		VinHSunc  : in std_logic;
+		VinVSync  : in std_logic;
+		VinHSync  : in std_logic;
 		VinClock  : in std_logic;
 		VinData   : in std_logic_vector(1 downto 0);
 		
-		VoutVSunc : out std_logic := '1';
-		VoutHSunc : out std_logic := '1';
+		VoutVSync : out std_logic := '1';
+		VoutHSync : out std_logic := '1';
 		VoutData  : out std_logic_vector(1 downto 0) := "00";
 		
 		SourceClock: in std_logic
@@ -39,6 +39,8 @@ architecture Behavioral of gameboy_vga is
 	
 	signal VoutClock: std_logic;
 	signal FakeReset: std_logic; -- not connected to anything
+
+	signal FakeClock: std_logic;
 	
 	component pll is
 		port (
@@ -50,17 +52,19 @@ architecture Behavioral of gameboy_vga is
 
 begin
 
+	FakeClock <= VinClock or VinHSync;
+
 	u0: component pll port map (
 		pll_input_clock_clk  => SourceClock,
 		pll_reset_reset      => FakeReset,
 		pll_output_clock_clk => VoutClock
 	);
 	
-	process (VinClock)
+	process (FakeClock)
 		variable ram_cell: integer range 0 to 23040 := 0;
 	begin
-		if falling_edge(VinClock) then
-			if (VinHSunc = '1' and VinVSunc = '1') then
+		if falling_edge(FakeClock) then
+			if (VinVSync = '1' and ram_cell > 160) then
 				ram_cell := 0;
 			else
 				ram_cell := ram_cell + 1;
@@ -80,25 +84,33 @@ begin
 		variable VideoRamCell: integer range 0 to 23040 := 0;
 	begin
 		if rising_edge(VoutClock) then
-			
+		
 			if (VideoPixel < 976) then
 				if (VideoPixel <= 768) then -- video data
-				
-					if (VideoPixel > 64 and VideoPixel < 705) then
-						VoutData <= not video_ram(VideoRamCell);
-						if (VideoPixel mod 4 = 0) then 
-							VideoRamCell := VideoRamCell + 1;
-						end if;
+					
+					if (VideoPixel = 1 or VideoPixel = 768) then
+						VoutData <= "10";
 					else
-						VoutData <= "00";
+						if (VideoPixel > 60 and VideoPixel < 701) then
+						--if (VideoPixel < 641) then
+							VoutData <= not video_ram(VideoRamCell);
+							if (VideoPixel mod 4 = 0) then 
+								VideoRamCell := VideoRamCell + 1;
+							end if;
+						else
+							VoutData <= "00";
+						end if;
 					end if;
+					
 				else
+				
 					VoutData <= "00";
 					if (VideoPixel > 792 and VideoPixel < 873) then
-						VoutHSunc <= '0';
+						VoutHSync <= '0';
 					else
-						VoutHSunc <= '1';
+						VoutHSync <= '1';
 					end if;
+					
 				end if;
 				VideoPixel := VideoPixel + 1;
 			else
@@ -108,18 +120,18 @@ begin
 					VideoRamCell := VideoRamCell - 160;
 				end if;
 			end if;
-
+			
 			if (VideoLine < 598) then
 				if (VideoLine > 577 and VideoLine < 581) then
-					VoutVSunc <= '0';
+					VoutVSync <= '0';
 				else
-					VoutVSunc <= '1';
+					VoutVSync <= '1';
 				end if;
 			else
 				VideoLine := 1;
 				VideoRamCell := 0;
 			end if;
-			
+		
 		end if;
 	end process;
 	
